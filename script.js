@@ -82,7 +82,7 @@ function playRoundHTML (input) {
 }
 
 function playAgain(){
-    // Change status color, disable button
+    // Change status color, disable button after game finish
     if (playerScoreVal === 5) {
         result.textContent = `You win !!! ${playerScoreVal}:${computerScoreVal}`
         result.style.color = "lime"
@@ -95,7 +95,7 @@ function playAgain(){
     for (i=0;i<inputPlayer.length;i++) {
         inputPlayer[i].disabled=true
     }
-    // Create play again button to start
+    // Restart game from the begin
     const playAgainButton = document.createElement("button")
     playAgainButton.innerHTML = "You want to play again?";
     playAgainButton.name = "play-again"
