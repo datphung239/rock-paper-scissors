@@ -9,7 +9,7 @@ html {
 
 body {
     position: fixed;
-    top:20%;
+    top:10%;
     text-align: center;
 }
 
@@ -50,4 +50,12 @@ input {
 }
 
 /* Play again */
+
+button {
+    margin-top: 20px;
+    size: 15px;
+    padding: 7px 10px 7px 10px;
+    font-weight: bold;
+}
+
 
