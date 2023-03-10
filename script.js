@@ -75,7 +75,7 @@ function playRoundHTML (input) {
         computerScore.textContent = `Computer Score: ${computerScoreVal}`
 
         // Play again
-        if (playerScoreVal === 5 || computerScoreVal ===5) {
+        if (playerScoreVal === 5 || computerScoreVal === 5) {
             playAgain()
         }
     })
@@ -98,17 +98,14 @@ function playAgain(){
     // Restart game from the begin
     const playAgainButton = document.createElement("button")
     playAgainButton.innerHTML = "You want to play again?";
-    playAgainButton.name = "play-again"
     document.body.appendChild(playAgainButton);
 
     playAgainButton.addEventListener("click",()=>{
         playAgainButton.remove()
-        playerScoreVal = 0
-        computerScoreVal = 0
         result.textContent = "Please select your choice!"
         result.style.color = "white"
-        playerScore.textContent = `Player Score: ${playerScoreVal}`
-        computerScore.textContent = `Computer Score: ${computerScoreVal}`
+        playerScore.textContent = `Player Score: ${playerScoreVal = 0}`
+        computerScore.textContent = `Computer Score: ${computerScoreVal = 0}`
         for (i=0;i<inputs.length;i++) {
             inputs[i].style.backgroundColor = "white"
             if (i < inputPlayer.length) {
