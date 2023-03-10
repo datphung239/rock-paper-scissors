@@ -1,0 +1,53 @@
+/* HTML File */
+html {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    position: fixed;
+    top:20%;
+    text-align: center;
+}
+
+/* Header */
+.title {
+    font-size: 65px;
+    font-weight: bolder;
+}
+
+#result {
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Body */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+input {
+    height: 70px;
+    width: 70px;
+    font-weight: bold;
+}
+
+
+.score {
+    font-size: 20px;
+}
+
+.player,.computer {
+    border: solid gray 2px;
+    padding: 10px 50px 50px 50px;
+
+}
+
+/* Play again */
+
