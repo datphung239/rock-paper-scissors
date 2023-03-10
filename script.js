@@ -34,6 +34,7 @@ const inputs = document.querySelectorAll("input")
 for (i=0; i <inputPlayer.length; i++) {
     playRoundHTML(inputPlayer[i])
 }
+
 let playerScoreVal = 0
 let computerScoreVal = 0
 function playRoundHTML (input) {
@@ -41,10 +42,9 @@ function playRoundHTML (input) {
         let playerSelection = input.value
         const computerSelection = getComputerChoice()
         let roundPlay = playRound(playerSelection,computerSelection)
-        // Reset again
+        // Reset color again 
         for (i=0;i<inputs.length;i++) {
             inputs[i].style.backgroundColor = "white"
-            console.log(inputs[i])
         }
 
         // Play game
@@ -81,8 +81,8 @@ function playRoundHTML (input) {
     })
 }
 
-
 function playAgain(){
+    // Change status color, disable button
     if (playerScoreVal === 5) {
         result.textContent = `You win !!! ${playerScoreVal}:${computerScoreVal}`
         result.style.color = "lime"
@@ -95,10 +95,28 @@ function playAgain(){
     for (i=0;i<inputPlayer.length;i++) {
         inputPlayer[i].disabled=true
     }
-    let playAgainButton = document.querySelector("#play-again")
-    playAgainButton.textContent = `You want to play again?`
-    playerScoreVal = 0
-    computerScoreVal = 0
+    // Create play again button to start
+    const playAgainButton = document.createElement("button")
+    playAgainButton.innerHTML = "You want to play again?";
+    playAgainButton.name = "play-again"
+    document.body.appendChild(playAgainButton);
+
+    playAgainButton.addEventListener("click",()=>{
+        playAgainButton.remove()
+        playerScoreVal = 0
+        computerScoreVal = 0
+        result.textContent = "Please select your choice!"
+        result.style.color = "white"
+        playerScore.textContent = `Player Score: ${playerScoreVal}`
+        computerScore.textContent = `Computer Score: ${computerScoreVal}`
+        for (i=0;i<inputs.length;i++) {
+            inputs[i].style.backgroundColor = "white"
+            if (i < inputPlayer.length) {
+                inputs[i].disabled=false
+            }
+        }
+    })
+    
 }
 
 
