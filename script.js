@@ -31,9 +31,13 @@ const inputPlayer = document.querySelector(".player").querySelectorAll("input")
 const inputComputer = document.querySelector(".computer").querySelectorAll("input")
 const inputs = document.querySelectorAll("input")
 
+/*
 for (i=0; i <inputPlayer.length; i++) {
     playRoundHTML(inputPlayer[i])
 }
+*/
+
+
 
 let playerScoreVal = 0
 let computerScoreVal = 0
@@ -43,29 +47,45 @@ function playRoundHTML (input) {
         const computerSelection = getComputerChoice()
         let roundPlay = playRound(playerSelection,computerSelection)
         // Reset color again 
+
+        /*
         for (i=0;i<inputs.length;i++) {
             inputs[i].style.backgroundColor = "white"
         }
-
+        */
+       
+        inputs.forEach((input) => input.style.backgroundColor = "white")
         // Play game
         if (roundPlay.includes("Win")) {
             playerScoreVal++
             // Color change
             input.style.backgroundColor = "lime"
+            /*
             for (i=0;i<inputComputer.length;i++) {
                 if (inputComputer[i].value === computerSelection) {
                     inputComputer[i].style.backgroundColor = "red"
                 }
             }
+            */
+            inputComputer.forEach((eachInputComputer) => {
+                if (eachInputComputer.value === computerSelection) {
+                    eachInputComputer.style.backgroundColor = "red"
+                }
+            })
         } else if (roundPlay.includes("Lose")) {
             computerScoreVal++
             // Color change
             input.style.backgroundColor = "red"
-            for (i=0;i<inputComputer.length;i++) {
+            /* for (i=0;i<inputComputer.length;i++) {
                 if (inputComputer[i].value === computerSelection) {
                     inputComputer[i].style.backgroundColor = "lime"
                 }
-            }
+            } */
+            inputComputer.forEach((eachInputComputer) => {
+                if (eachInputComputer.value === computerSelection) {
+                    eachInputComputer.style.backgroundColor = "lime"
+                }
+            })
         } else {
             playerScoreVal++
             computerScoreVal++
@@ -73,13 +93,16 @@ function playRoundHTML (input) {
         result.textContent = roundPlay
         playerScore.textContent = `Player Score: ${playerScoreVal}`
         computerScore.textContent = `Computer Score: ${computerScoreVal}`
-
         // Play again
         if (playerScoreVal === 5 || computerScoreVal === 5) {
             playAgain()
         }
     })
 }
+
+inputPlayer.forEach((input) => {
+    playRoundHTML(input)
+})
 
 function playAgain(){
     // Change status color, disable button after game finish
@@ -113,7 +136,6 @@ function playAgain(){
             }
         }
     })
-    
 }
 
 
