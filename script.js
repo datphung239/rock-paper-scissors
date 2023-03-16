@@ -125,6 +125,7 @@ let playerScoreVal = 0
 let computerScoreVal = 0
 
 inputsPlayer.addEventListener("click",execute = (click)=> {
+    if (click["srcElement"].value === undefined) return
     // Reset color
     styledElement = document.querySelectorAll('.container *[style]')
     styledElement.forEach((e) => e.removeAttribute("style"))
