@@ -180,6 +180,7 @@ function playAgain(){
     })
     // Restart game from the begin
     const playAgainButton = document.createElement("button")
+    playAgainButton.classList.add("play-again")
     playAgainButton.textContent = "You want to play again?";
     document.body.appendChild(playAgainButton);
 
