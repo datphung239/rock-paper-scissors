@@ -146,8 +146,7 @@ inputsPlayer.addEventListener("click",execute = (click)=> {
         inputComputer.style.backgroundColor = "lime"
     } else {
         playerScoreVal++
-dsadasdsad
-computerScoreVal++
+        computerScoreVal++
         inputPlayer.style.backgroundColor = "yellow"
         inputComputer.style.backgroundColor = "yellow"
     }
