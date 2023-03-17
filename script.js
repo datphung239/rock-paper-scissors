@@ -116,16 +116,16 @@ function playAgain(){
 
 // Solution 2
 
-result = document.querySelector("#result")
-playerScore = document.querySelector("#player-score")
-computerScore = document.querySelector("#computer-score")
-inputsPlayer = document.querySelector(".player")
+let result = document.querySelector("#result")
+let playerScore = document.querySelector("#player-score")
+let computerScore = document.querySelector("#computer-score")
+let inputsPlayer = document.querySelector(".player")
 
 let playerScoreVal = 0
 let computerScoreVal = 0
 
 inputsPlayer.addEventListener("click",execute = (click)=> {
-    if (click["srcElement"].value === undefined) return
+    if (!click["srcElement"].value) return
     // Reset color
     styledElement = document.querySelectorAll('.container *[style]')
     styledElement.forEach((e) => e.removeAttribute("style"))
@@ -159,6 +159,8 @@ inputsPlayer.addEventListener("click",execute = (click)=> {
         playAgain()
     }
 })
+
+
 
 function playAgain(){
     // Change status color, disable button after game finish
@@ -195,5 +197,4 @@ function playAgain(){
         })
     })
 }
-
 
