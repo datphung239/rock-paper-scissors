@@ -146,7 +146,8 @@ inputsPlayer.addEventListener("click",execute = (click)=> {
         inputComputer.style.backgroundColor = "lime"
     } else {
         playerScoreVal++
-        computerScoreVal++
+dsadasdsad
+computerScoreVal++
         inputPlayer.style.backgroundColor = "yellow"
         inputComputer.style.backgroundColor = "yellow"
     }
@@ -159,8 +160,6 @@ inputsPlayer.addEventListener("click",execute = (click)=> {
         playAgain()
     }
 })
-
-
 
 function playAgain(){
     // Change status color, disable button after game finish
