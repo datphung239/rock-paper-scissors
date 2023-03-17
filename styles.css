@@ -36,6 +36,7 @@ input {
     height: 70px;
     width: 70px;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 .score {
