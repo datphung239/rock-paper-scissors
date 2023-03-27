@@ -1,58 +1,59 @@
 /* HTML File */
 html {
-    background-color: #000000;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
-    position: fixed;
-    top:10%;
-    text-align: center;
+  position: fixed;
+  top: 10%;
+  text-align: center;
 }
 
 /* Header */
 .title {
-    font-size: 60px;
-    font-weight: bolder;
+  font-size: 60px;
+  font-weight: bolder;
 }
 
 #result {
-    font-size: 35px;
-    font-style: italic;
-    text-align: center;
+  font-size: 35px;
+  font-style: italic;
+  text-align: center;
 }
 
 /* Body */
 .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 input {
-    height: 70px;
-    width: 70px;
-    font-weight: bold;
-    border-radius: 10px;
+  height: 70px;
+  width: 70px;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 .score {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-.player,.computer {
-    border: solid gray 2px;
-    padding: 10px 50px 50px 50px;
+.player,
+.computer {
+  border: solid gray 2px;
+  padding: 10px 50px 50px 50px;
 }
 
 /* Play again */
 
 .play-again {
-    margin-top: 40px;
-    font-size: 20px;
-    padding: 5px 10px 5px 10px;
-    font-weight: bolder;
+  margin-top: 40px;
+  font-size: 20px;
+  padding: 5px 10px 5px 10px;
+  font-weight: bolder;
 }
